@@ -28,7 +28,7 @@ npm install
 You need create an .env file like the following
 
 ```
-MONGODB_URI=mongodb://localhost/example
+MONGODB_URI=YOUR_MONGODB_URI
 JWT_SECRET=YOUR_JWT_SECRET
 ```
 
