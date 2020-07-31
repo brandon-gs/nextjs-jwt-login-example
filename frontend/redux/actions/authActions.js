@@ -1,5 +1,5 @@
 import Router from 'next/router';
-//import axios from 'axios';
+import axios from 'axios';
 import { AUTHENTICATE, DEAUTHENTICATE } from '../types/authTypes';
 import { setCookie, removeCookie } from '../../utils/cookie';
 import { createError, removeError } from './errorActions';
@@ -11,22 +11,18 @@ const authenticate = ({ email, password }, type) => {
   }
   return async dispatch => {
     const formData = { email, password };
-    const res = await fetch(`/${type}`, {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    const responseData = await res.json();
-    if (res.status === 200) {
-      const { token } = responseData;
+    try {
+      const {
+        data: { token },
+      } = await axios.post(`/${type}`, formData);
       setCookie('token', token);
       Router.push('/');
       dispatch(removeError());
       dispatch({ type: AUTHENTICATE, payload: token });
-    } else {
-      const { message } = responseData;
+    } catch ({ response }) {
+      const {
+        data: { message },
+      } = response;
       dispatch(createError(message));
     }
   };
