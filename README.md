@@ -20,8 +20,8 @@
 Make sure you have Node and NPM installed.
 
 ```bash
-git clone https://github.com/alan2207/nextjs-jwt-authentication
-cd nextjs-jwt-authentication
+git clone https://github.com/brandon-gs/nextjs-jwt-login-example
+cd nextjs-jwt-login-example
 npm install
 ```
 
