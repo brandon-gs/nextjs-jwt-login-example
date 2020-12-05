@@ -5,8 +5,6 @@ export const setCookie = (key, value) => {
     cookie.set(key, value, {
       expires: 1000,
       path: '/',
-      secure: true,
-      sameSite: 'Lax',
     });
   }
 };
