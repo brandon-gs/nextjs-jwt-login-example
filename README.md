@@ -25,7 +25,7 @@ cd nextjs-jwt-login-example
 npm install
 ```
 
-You need create an .env file like the following
+You need create an .env file like below
 
 ```
 MONGODB_URI=YOUR_MONGODB_URI
