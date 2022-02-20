@@ -52,3 +52,5 @@ The user sends an auth request from the client. In the response, JWT is received
 
 #### The server:
 When the user makes a page request, cookies are also sent along, so the server can read them. To read it, the user is using the `getInitialProps` lifecycle method, provided by Next.js. It gets an argument - the context object that contains some properties. You can read more about it [here](https://github.com/zeit/next.js/#fetching-data-and-component-lifecycle). On the `req` property, we can access `headers` property which contains the cookie with the token. An action creator is dispatched to save the token in the redux store, and the app now has access to the token again.
+
+### Feel free to make PR to improve this repo!
