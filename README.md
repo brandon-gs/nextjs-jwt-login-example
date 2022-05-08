@@ -3,11 +3,11 @@
 
 
 ## Used tools
-  - React
-  - Next.js
+  - React v18
+  - Next.js v12
   - Redux
   - Express
-  - JSONwebtoken
+  - JWT
   - Passport
   - Mongodb
 
