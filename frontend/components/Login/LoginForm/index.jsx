@@ -4,8 +4,8 @@ import actions from '../../../redux/actions';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
