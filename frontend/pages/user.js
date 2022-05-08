@@ -1,5 +1,3 @@
-//import axios from '../utils/axios';
-import { connect } from 'react-redux';
 import verifyToken from '../getInitialProps/verifyToken';
 import getUser from '../getInitialProps/getUser';
 import Layout from '../components/Layout/';
@@ -23,4 +21,4 @@ Whoami.getInitialProps = async ctx => {
   return { user };
 };
 
-export default connect(state => state)(Whoami);
+export default Whoami;
