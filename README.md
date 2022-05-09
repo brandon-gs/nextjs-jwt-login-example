@@ -1,5 +1,7 @@
 # Login with Next.js JWT
 
+## [Demo using typescript](https://github.com/brandon-gs/nextjs-typescript-jwt-booilerplate)
+
 ## Used tools
 
 - React v17
