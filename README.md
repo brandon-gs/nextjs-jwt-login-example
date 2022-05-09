@@ -41,6 +41,11 @@ npm run dev
 npm run build
 npm start
 ```
+## Idea:
+
+Server side rendered apps are awesome. They make a sweet spot between monolithic apps and single page apps powered by microservices. But they also add complexity to their creation. Keeping state on the server and the client in sync, routing on the client and the server, loading data before server rendering, etc. are some of the things that make our apps more complex. That is why frameworks such as Next.js exist, to solve most of those problems. However, things such as authentication are left to us. This is an attempt to implement the authentication based on JWT. The thing is that we can't store tokens in localStorage as we would do with SPA.
+
+The idea is to receive token from the server on the client, store it in cookies, and then whenever a page renders on the server, we would be able to access the token from the cookie.
 
 ## How it works:
 
